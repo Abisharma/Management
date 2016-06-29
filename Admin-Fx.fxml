@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.createEvent">
+   
+   <fx:define>
+   		<fx:include fx:id="newEvent" source="newEvent.fxml" />
+   </fx:define>
+   <top>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <MenuBar>
+              <menus>
+                <Menu mnemonicParsing="false" text="_Events">
+                  <items>
+                    <MenuItem fx:id="newItem" mnemonicParsing="false" onAction="#createEv" text="New Event..." />
+                        <MenuItem mnemonicParsing="false" text="Open Event..." />
+                        <MenuItem mnemonicParsing="false" text="Save" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Settings" />
+                        <MenuItem mnemonicParsing="false" onAction="#profile" text="Profile" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" onAction="#closeMenu" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="_Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Cut" />
+                        <MenuItem mnemonicParsing="false" text="Copy" />
+                        <MenuItem mnemonicParsing="false" text="Paste" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <Menu mnemonicParsing="false" text="Edit Events">
+                          <items>
+                            <MenuItem mnemonicParsing="false" text="Event 1" />
+                              <MenuItem mnemonicParsing="false" text="Event 2" />
+                              <MenuItem mnemonicParsing="false" text="Event 3" />
+                          </items>
+                        </Menu>
+                        <MenuItem mnemonicParsing="false" text="Delete" />
+                  </items>
+                </Menu>
+                  <Menu mnemonicParsing="false" text="_Results">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="Winners" />
+                        <MenuItem mnemonicParsing="false" text="Scorecard" />
+                        <MenuItem mnemonicParsing="false" text="Status" />
+                        <MenuItem mnemonicParsing="false" text="Student Profile" />
+                    </items>
+                  </Menu>
+                <Menu mnemonicParsing="false" text="_Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#aboutUs" text="About Us" />
+                        <MenuItem mnemonicParsing="false" text="Tip Of the Day !" />
+                        <MenuItem mnemonicParsing="false" text="Check For Update ?" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </children>
+      </VBox>
+   </top>
+   <bottom>
+      <Label style="-fx-background-color:linear-gradient(#e9d362, #333333);" text="Developed By: CoolAmigos" textAlignment="RIGHT" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="Droid Sans" size="17.0" />
+         </font>
+      </Label>
+   </bottom>
+   <left>
+      <TreeView prefHeight="355.0" prefWidth="169.0" BorderPane.alignment="CENTER" />
+   </left>
+   <center>
+      <GridPane fx:id="centerGrid" alignment="CENTER" styleClass="root" stylesheets="@application.css" BorderPane.alignment="CENTER">
+         
+      </GridPane>
+   </center>
+</BorderPane>
